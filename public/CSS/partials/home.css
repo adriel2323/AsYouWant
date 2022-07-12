@@ -1,0 +1,174 @@
+
+
+.carrusel {
+    max-width: 1000px;
+    position: relative;
+    padding-top: 60px;
+    margin: auto;
+}
+/*
+.mySlides {
+    display: none;
+}
+
+.btn-prev, .btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 20px;
+    padding: 1.5rem;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    color: white;
+}
+
+@keyframes fading {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.fade {
+    animation: fading;
+    animation-duration: 1.5s;
+}
+*/
+
+main h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.indexUser section {
+    display: flex;
+    flex-direction: column
+}
+
+main section h2 {
+    margin: 0 3rem
+}
+
+main section ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.li-curso {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+    list-style: none;
+}
+
+.li-curso:hover {
+    box-shadow: 0px 0px 10px var(--gris-oscuro);
+}
+
+.container-curso {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.course-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.course-card .media {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--marron);
+    transition: color 0.3s ease;
+}
+
+.course-card .media:hover {
+    color: var(--celeste);
+}
+
+.cursitosCategory {
+    width: 100%;
+    display: flex;
+}
+
+/*BOTONES*/
+
+.buttons {
+    display: flex;
+    color: var(--negro);
+    width: 100%;
+    margin: 10px;
+}
+
+.add {
+    width: 15%;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.buy {
+    width: 79%;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.add:hover, .buy:hover {
+    background-color: var(--amarillo);
+}
+
+/*RESPONSIVE*/
+@media (max-width: 760px) {
+    .li-curso {
+        min-width: 40%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .li-curso {
+        width: 90%;
+    }
+}

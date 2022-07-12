@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <main class="register_main">
+        <div class="register_lefth">
+            <picture class="register_logo">
+                <img src="/Images/Logo1.svg" class="register_logo">
+            </picture>
+            <a href="/usuario/login">
+                <div class="register_iconContein">
+                    <i class="register_icon fa-solid fa-circle-arrow-left"></i>
+                </div>
+            </a>
+        </div>
+        <div class="register_rigth">
+            <h1 class="register_title">
+                Registrate para comenzar a aprender
+            </h1>
+            <% if (locals.errors) { 
+                errors.forEach(error => { %>
+                <p class="register_errores"><%= error.msg %></p>
+            <% });
+            } %>
+            <% if (locals.errors) { 
+                errors.forEach(error => { %>
+                <div class="login_errores">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            <% });
+            } %>
+            <form method="POST" action="/usuario/register" class="register_form" enctype="multipart/form-data">
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Nombre</label>
+                    <input type="text" class="register_input" name="nombre" value="<%= locals.old && old.nombre ? old.nombre :'' %>" placeholder="Ej:Juan" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Apellido</label>
+                    <input type="text" class="register_input" value="<%= locals.old && old.apellido ? old.apellido :'' %>" name="apellido" placeholder="Ej:Perez" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Email</label>
+                    <input type="text" class="register_input" name="email" value="<%= locals.old && old.email ? old.email :'' %>" placeholder="nombre@ejemplo.com" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Descripción</label>
+                    <input type="textarea" class="editUserInput" name="descripcion" value="<%= locals.old && old.descripcion ? old.descripcion :'' %>" placeholder="Contanos sobre vos!" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Contraseña</label>
+                    <input type="password" class="register_input" value="<%= locals.old && old.contraseña ? old.contraseña :'' %>" name="contraseña" placeholder="Contraseña" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Confirmar
+                        contraseña</label>
+                    <input type="password" class="register_input" value="<%= locals.old && old.contraseña ? old.contraseña :'' %>" placeholder="Contraseña" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Categoria</label>
+                    <div class="category-crear">  
+                        <label for="category-crear"><input type="radio" name="categoria" value="Alumno" id="Alumno">Alumno</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Profesor" id="Profesor">Profesor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Editor" id="Editor">Editor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Administrador" id="Administrador">Administrador</label><br>
+                    </div>
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Foto perfil</label>
+                    <input type="file"  placeholder="Archivo" name="imagen" id="imagen" >
+                </div>
+                <div class="register_sec-botones">
+                    <input type="submit" value="Registrarme" class="register_boton-register">
+                    <input type="reset" value="Borrar" class="register_boton-borrar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="/Js/registerValidation.js"></script>
+</body>
+</html>

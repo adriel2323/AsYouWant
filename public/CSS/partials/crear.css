@@ -1,0 +1,129 @@
+.main_crear {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--gris-claro);
+}
+
+.top-crear {
+    padding-top: 130px;
+}
+
+.crear_form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crear_form div {
+    width: 95%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.description-crear input, .price-crear input {
+    border: var(--gris-claro);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 380px;
+}
+
+.editar_textArea {
+    border: var(--gris-claro);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 380px;
+}
+
+.category-crear {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    max-width: 520px;
+}
+
+.category-crear input {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.multimedia-crear {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+}
+
+.multimedia-crear input {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.crearBtn {
+    display: flex;
+    max-width: 400px;
+}
+
+.crearBtn .button {
+    width: 45%;
+    border: var(--celeste);
+    border-radius: 5px;
+    color: var(--violeta);
+    font-weight: bold;
+    background-color: var(--celeste);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.crearBtn .button:hover {
+    background-color: var(--amarillo);
+}
+
+.erroresCreate .crear-errorList {
+    color: red;
+}
+.crear_errores {
+    color: var(--rojo);
+    list-style: none;
+    padding-left: 20px !important;
+}
+
+.crear_iconContein {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-left: 60px;
+    z-index: 10;
+    position: fixed;
+}
+
+.crear_icon {
+    font-size: 40px;
+    color: var(--gris-oscuro);
+    opacity: 0.5;
+}
+
+
+@media (max-width: 760px) {
+    .description-crear input, .price-crear input, .button {
+        width: 360px;
+    }
+}
+
+@media (max-width: 360px) {
+    .category-crear {
+        flex-direction: column;
+    }
+    .multimedia-crear {
+        flex-direction: column;
+    }
+    .crearBtn {
+        flex-direction: column;
+    }
+    .description-crear input, .price-crear input, .button {
+        width: 250px;
+    }
+}

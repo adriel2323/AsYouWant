@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+:root{
+    --celeste: #00ABD5;
+    --amarillo: #fcba04;
+    --violeta: #28112b;
+    --marron: #453643;
+    --gris-claro: #ebebeb;
+    --gris-oscuro: #5E5D5C;
+    --blanco: #FFF;
+    --negro: #000000;
+    /*Fuente*/
+
+    --Poppins: 'Poppins', serif;
+
+    /*Font Sizes*/
+    --text: 12px;
+    --title: 24px;
+    --text-lg: 18px;
+    --text-md: 16px;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: var(--title);
+    font-family: var(--Poppins);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: var(--text-lg);
+    font-weight: normal;
+}
+
+/*Estilos home*/
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top-home {
+    padding-top: 60px;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+}
+
+main section article .course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+main section article .course-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.course-card .media {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--marron)
+}
+
+/*BOTONES*/
+
+.buttons {
+    display: flex;
+    color: var(--negro);
+    width: 100%;
+    margin: 10px;
+}
+
+.add {
+    width: 15%;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+}
+
+.buy {
+    width: 79%;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+}
+
+/*Estilos globales*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--Poppins);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var();
+    background-color: var(--blanco);
+}
+
+h3 {
+    font-size: var(--title);
+}
+
+p {
+    font-size: var(--text);
+}
+
+/*Estilos carrito*/
+
+.carrito main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carrito .top-carrito {
+    padding-top: 60px
+}
+
+.carrito section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido-carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.contenido-carrito article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: var(--blanco);
+    border-bottom: solid 1px;
+}
+
+.contenido-carrito .inf-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.contenido-carrito button {
+    font-size: 2em;
+    border: none;
+    color: var(--violeta);
+    padding: 0.5em 1em;
+    background-color: var(--blanco)
+}
+
+.resumen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 7rem 0 15rem;
+    padding: 1rem;
+    background-color: var(--gris-claro);
+}
+
+.resumen button {
+    color: var(--violeta);
+    background-color: var(--celeste);
+    font-size: var(--text-md);
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/*OTROS CURSOS*/
+
+.cursos2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursos2 article {
+    background-color: var(--gris-claro);
+    width: 30%;
+}
+
+.course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.course-card div {
+    display: flex;
+    flex-direction: row;
+}
+
+/*ESTILOS FOOTER*/
+
+footer {
+    background-color: var(--gris-claro);
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--negro);
+    padding: 20px 10px;
+    margin-bottom: 100px;
+}
+
+footer .logo {
+    width: 150px;
+}
+
+.ending {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 15%;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+footer .btn{
+    color: var(--marron);
+    border: none;
+}
+
+/* Estilos detalle de producto  */
+
+/* Estilos detalle de producto  */
+
+header {
+    width: 100%;
+}
+
+.complet-nav {
+    background-color: var(--celeste);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+.logo-lg {
+    margin-left: 10px;
+}
+
+.logo img .lgo-simple {
+    width: 100%;
+
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.icon-sec {
+    width: 100%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+}
+
+footer form {
+        background: var(--amarillo);
+        border: 0;
+        color: inherit;
+        font: inherit;
+        font-size: var(--text);
+        line-height: normal;
+        overflow: visible;
+        padding: 5px 5px;
+        border-radius: 5px;
+}
+
+.input {
+    background: var(--blanco);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.submit {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0
+}
+
+.fa-search {
+    padding: 10px;
+    background-color: var(--violeta);
+    color: var(--blanco);
+    border-radius: 0 5px 5px 0;
+}
+
+.contein-user-nav {
+    margin: 0 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.user-nav {
+    display: flex;
+    border-left: 2px bold --negro;
+    align-items: center;
+    list-style: none;
+}
+
+.user-nav li {
+    margin: 0 5px;
+}  
+
+
+/* Contenido de pagina producto */
+
+div .top-curso {
+    padding-top: 60px;
+    
+}
+.top-curso a {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    object-fit: contain;
+}
+
+.top-curso img {
+    width: 100%;
+    padding-top: 60px;
+    height: max-content;
+}
+
+.detalles-curso {
+    display: flex;
+    margin-top: 10px;
+}
+
+div .product-main {
+    width: 60%;
+    margin-right: 20px;
+}
+
+/* Estilos descricion y detalles del curso */
+
+.descripcion-curso {
+    flex-grow: 10;
+}
+
+.max-tittle {
+    font-size: 45px;
+    font-weight: bolder;
+    line-height: 40px;
+    text-transform: uppercase;
+    
+}
+.carrusel {
+    width: 100%;
+}
+
+/* Estilos temario */
+
+.temario {
+    margin: 40px 0;
+}
+
+.box-tipo {
+    background-color: var(--marron);
+    border-radius: 5px;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
+    margin: 10px 0;
+    padding: 6px;
+}
+
+.text-insider {
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* Estilos caja de opiniones */
+
+.opiniones-box {
+    margin-bottom: 50px;
+}
+
+.conteiner {
+    display: flex; 
+    justify-content: center;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
+    padding: 10px;
+    margin-top: 15px;
+    background-color: var(--gris-oscuro);
+}
+
+a {
+    display: flex;
+}
+
+.icon-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-conteiner img {
+    width: 30%;
+    
+}
+
+.text-conteiner {
+    text-align: center;
+    color: var(--blanco);
+    font-size: var(--text-md);
+}
+
+a {
+    display: contents;
+    width: 100%;
+}
+
+.cifra-conteiner {
+    color: var(--blanco);
+    font-size: var(--text-md);
+}
+
+.conteiner-son {
+    padding: 10px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* Estilos caja de comentarios */
+.comentarios-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 60px;
+    background: #F0F0F0;
+    box-shadow: inset 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+}
+
+.comentario-indiv {
+    display: flex;
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.comentario-indiv picture {
+    padding-right: 20px;
+}
+.commit-user {
+    width: 50px;
+}
+
+/* Estilos recomendaciones de cursos */
+
+.recomendaciones-box {
+    display: flex;
+    width: 100%;
+}
+
+.lista-recomendaciones{
+    list-style: none;
+}
+
+.recomendacion-indiv {
+    display: flex;
+    margin: 15px 0;
+    
+}
+
+.miniatura-curso {
+    overflow: hidden;
+    width: 20%;
+}
+.imagen-miniatura {
+    width: 100%;
+}
+
+.recomendacion-detalles {
+    width: 60%; 
+    margin-left: 15px;
+}
+
+.recomendacion-detalles_titulo1 {
+    font-size: var(--text-lg);
+    font-weight: bold;
+}
+
+.recomendacion-detalle_puntuaciones {
+    display: flex;
+    align-self: center;
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    padding: inherit;
+    margin-top: 3%;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 15%;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos_cifra {
+    margin-left: 5px;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion_cifra {
+    margin-left: 5px;
+}
+
+
+
+
+/* Estilos seccion de costos */
+
+.detalles-costos {
+    padding: 10px 10px 30px 10px;
+    width: 40%;
+    max-width: 572px;
+    background: #FFFFFF;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+    height: fit-content;
+}
+
+.precio-moneda {
+    display: flex;
+    padding: 10px 0;
+    align-items: baseline;
+}
+
+.precio {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.detalles-costos ul {
+    list-style: none;
+    font-size: var(--text-lg);
+    padding: 10px 0;
+}
+
+.detalles-costos ul li h4 {
+    font-weight: normal;
+    font-size: var(--text);
+}
+
+.detalles-costos ul li {
+    margin: 10px 0;
+}
+
+.boton-compra {
+    display: flex;
+    justify-content: center;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+}
+.boton-accion{
+    font-size: var(--title);
+    font-weight: 500;
+}

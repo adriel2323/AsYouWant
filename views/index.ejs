@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <section>
+        <img class="slide" src="/Images/banner.jpg" width="100%">
+    </section>
+    <main>
+        <h1>Cursos Recomendados</h1>
+        <section>
+            <ul>
+                <% cursos.forEach(el =>{ %>
+                    <li class="li-curso">
+                        <a href="/productos/info/<%=el.id %>">
+                            <article class="container-curso" >
+                                <img src="<%=el.imagen %>" width="100%">
+                                <div class="container-curso-info">
+                                    <div class="course-card">
+                                        <h3><%=el.titulo %></h3>
+                                        <div>
+                                            <p><%=el.profesor %></p>
+                                            <div class="media">
+                                                <i class="fas fa-file-alt"></i>
+                                                <i class="fas fa-headphones"></i>
+                                                <i class="fas fa-video"></i>
+                                            </div>
+                                        </div>
+                                        <p><%=el.precio %></p>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                                        <button class="buy">Comprar</button>
+                                    </div>
+                                </div>
+                            </article>                        
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
