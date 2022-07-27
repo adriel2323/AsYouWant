@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { Console } = require('console');
+const { Console, log } = require('console');
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -38,6 +38,7 @@ var temporadaSale = {
 
 const controller = {
     home :  function(req, res, next) {
+      console.log(db.Curso);
       db.Curso.findAll()
       .then((cursos)=> {
         res.render('index', {cursos});
