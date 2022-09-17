@@ -37,7 +37,7 @@ let hoy = fecha.getMonth();
 var mesActual =meses[hoy];
 
 var temporadaSale = {
-    tipo: 'saleOffer.png',
+    tipo: 'salOffer.png',
     noviembre: 'navidad.jpg',
     diciembre: 'navidad.jpg',
     marzo: 'black_friday.jpg',
@@ -48,25 +48,25 @@ var temporadaSale = {
     agosto: 'otonio.jpg',
 };
 
-
 const controller = {
     list: (req, res) => {
-        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        console.log(products)
+        // let saleNow = temporadaSale[mesActual] || temporadaSale[temporadaSale.tipo];
+        let saleNow = temporadaSale.tipo;
+        console.log(saleNow)
 
         db.categoriaCursos.findAll()
         .then(function(categorias) {
             let categoriasBase = categorias;
             db.Curso.findAll()
             .then((resultado) => {
-                res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categoriasBase, categoriaBuscada: ""})
+                res.render('listaProductos', {titulo:"Lista de productos",productos:resultado, saleNow: saleNow, categorias: categoriasBase, categoriaBuscada: ""})
             })
         })
     },
 
     categoriaCursos: (req,res) => {
         let categoriaBuscada = req.params.categoria;
-        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        let saleNow = temporadaSale.mesActual || temporadaSale.tipo;
 
 
         db.categoriaCursos.findAll()
@@ -88,7 +88,7 @@ const controller = {
             })
             .then(function(cursosFiltrados) {
                 console.log(cursosFiltrados);
-                res.render("listaProductos", {productos:cursosFiltrados,saleNow: saleNow, categorias: resultado, categoriaBuscada: categoriaBuscada})
+                res.render("listaProductos", {titulo:categoriaBuscada,productos:cursosFiltrados,saleNow: saleNow, categorias: resultado, categoriaBuscada: categoriaBuscada})
             })
         })
     },
@@ -104,8 +104,8 @@ const controller = {
                 }
             })
             .then(function(cursosPCategoria){
-
-                res.render('info-producto-2',{productDetail:curso,sugerencias:cursosPCategoria})
+                let titulo=curso.titulo;
+                res.render('info-producto-2',{titulo:titulo,productDetail:curso,sugerencias:cursosPCategoria})
             })
         }
         )
@@ -124,7 +124,7 @@ const controller = {
             .then(function(curso){
                 let productEditar = curso[0];
                 console.log(productEditar)
-                return res.render('editar-producto', {productEditar, categorias:categorias, findUser:req.session.usuarioLogueado })
+                return res.render('editar-producto', {titulo:"Editando",productEditar, categorias:categorias, findUser:req.session.usuarioLogueado })
             })
             
         })
@@ -179,7 +179,7 @@ const controller = {
     crear: (req,res) => {
         db.categoriaCursos.findAll()
         .then(function(categorias) {
-            return res.render('crear-producto', { categorias:categorias, findUser:req.session.usuarioLogueado })
+            return res.render('crear-producto', {titulo:"Creando Curso", categorias:categorias, findUser:req.session.usuarioLogueado })
         })
     },
 

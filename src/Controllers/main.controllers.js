@@ -24,15 +24,15 @@ let hoy = fecha.getMonth();
 var mesActual =meses[hoy];
 
 var temporadaSale = {
-    tipo: 'saleOffer.png',
-    noviembre: 'navidad.jpg',
-    diciembre: 'navidad.jpg',
-    marzo: 'black_friday.jpg',
-    abril: 'black_friday.jpg',
-    mayo: 'black_friday.jpg',
-    junio: 'otonio.jpg',
-    julio: 'otonio.jpg',
-    agosto: 'otonio.jpg',
+  tipo: 'salOffer.png',
+  noviembre: 'navidad.jpg',
+  diciembre: 'navidad.jpg',
+  marzo: 'black_friday.jpg',
+  abril: 'black_friday.jpg',
+  mayo: 'black_friday.jpg',
+  junio: 'otonio.jpg',
+  julio: 'otonio.jpg',
+  agosto: 'otonio.jpg',
 };
 
 
@@ -41,7 +41,7 @@ const controller = {
       console.log(db.Curso);
       db.Curso.findAll()
       .then((cursos)=> {
-        res.render('index', {cursos});
+        res.render('index', {titulo:"Home",cursos});
       });
     },
 
@@ -62,7 +62,8 @@ const controller = {
     },
     buscar: (req,res) => {
       let buscado = req.query.palabraBuscada
-      let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+      // let saleNow = temporadaSale.mesActual || temporadaSale.tipo;
+      let saleNow =  temporadaSale.tipo;
       db.categoriaCursos.findAll()
         .then(function(categorias) {
           db.Curso.findAll({
@@ -73,7 +74,7 @@ const controller = {
             }
           })
           .then(function(resultado){
-            res.render("listaProductos", {productos:resultado,saleNow: saleNow, categorias: categorias, categoriaBuscada: ""})
+            res.render("listaProductos", {titulo:"Cursos"+buscado,productos:resultado,saleNow: saleNow, categorias: categorias, categoriaBuscada: ""})
           })
         })
     },
@@ -82,7 +83,7 @@ const controller = {
       db.Curso.findAll()
       .then ((cursos) => {
         cursosParaCompra = cursos;
-        res.render('carrito', {compras: cursosParaCompra});
+        res.render('carrito', {titulo:"Carrito",compras: cursosParaCompra});
       }
       )
     }

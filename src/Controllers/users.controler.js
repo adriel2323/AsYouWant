@@ -16,7 +16,7 @@ const sequelize = db.sequelize;
 
 const controller = {
     login:(req,res,next) => {
-                res.render('login')
+                res.render('login', {titulo:"Login"})
     },
 
     cuenta: (req,res,next) => {
@@ -71,7 +71,7 @@ const controller = {
     register:(req,res,next) => {
         db.Categoria.findAll()
             .then(categorias=>{
-                res.render('register', {categorias})
+                res.render('register', {titulo:"Registro",categorias})
             })
     },
 
@@ -174,7 +174,7 @@ const controller = {
     perfil:(req, res, next) => {
         db.Usuario.findByPk(req.params.id)
             .then((findUser)=> {
-                res.render('perfil', {findUser})
+                res.render('perfil', {titulo:"Mi perfil",findUser})
             })
         // let idUsuario = req.params.id;
         // let findUser = encontrarUser(idUsuario);
@@ -187,7 +187,7 @@ const controller = {
         let idUsuario = req.params.id; 
         db.Usuario.findByPk(idUsuario)
             .then((findUser)=> {
-                res.render('editUser', {findUser})
+                res.render('editUser', {titulo:"Editando mi perfil",findUser})
             })
             .catch((err)=>{
                 console.log(err);
